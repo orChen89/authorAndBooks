@@ -121,7 +121,7 @@ public class Test implements CommandLineRunner {
             ResponseEntity<Book[]> allBooks = restTemplate.
                     getForEntity(TestUrlConstants.GETTING_ALL_BOOKS_URL, Book[].class);
 
-            //Getting a customers list to an objects array body
+            //Getting a books list to an objects array body
             Book[] books = allBooks.getBody();
 
             assert books != null;
@@ -144,7 +144,7 @@ public class Test implements CommandLineRunner {
             ResponseEntity<Book[]> allBooks = restTemplate.
                     getForEntity("http://localhost:8080/library/booksByYears/2015/2020/", Book[].class);
 
-            //Getting a customers list to an objects array body
+            //Getting a books list to an objects array body
             Book[] books = allBooks.getBody();
 
             assert books != null;
